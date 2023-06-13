@@ -1,0 +1,118 @@
+﻿@media(max-width: 992px){
+    label{
+        font-size: 18px;
+    }
+
+    select {
+        height: 60px;
+        width: 100%;
+    }
+}
+
+@media(max-width: 768px){
+
+    a{
+        font-size: large;
+        text-align: center;
+    }
+
+    .div_allcards {
+        flex-direction: column;
+    }
+
+    .div_cards{
+        width: 95%;
+    }
+
+    .div-item_sort{
+        height: 60px;
+    }
+
+    .input_sort {
+        width: 150px;
+    }
+
+    .h1_add {
+        font-size: 25px;
+    }
+
+    label{
+        font-size: 14px;
+    }
+
+    input{
+        width: 190%;
+    }
+
+    .form-div_info{
+        gap: 0;
+    }
+
+    .input_description{
+        width: 200%;
+    }
+
+    .form-select{
+        width: 180%;
+    }
+
+    .form-button{
+        height: 40px;
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 642px){
+
+    nav{
+        gap: 0;
+    }
+
+    ul{
+        gap: 10px;
+        padding: 0;
+    }
+
+    .h1_add {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 530px){
+    a{
+        font-size: medium;
+    }
+}
+
+@media(max-width: 410px){
+    .form-div_info{
+        gap: 0;
+    }
+
+    .form-div_buttons{
+        gap: 1%;
+    }
+
+    .form-button{
+        height: 30px;
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 376px){
+    a{
+        font-size: small;
+    }
+
+    .h1_add{
+        font-size: 18px;
+    }
+
+    input{
+        width: 120%;
+    }
+
+    .form-select{
+        width: 200%;
+    }
+}

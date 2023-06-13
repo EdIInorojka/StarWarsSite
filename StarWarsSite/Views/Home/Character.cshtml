@@ -1,0 +1,65 @@
+﻿@model StarWarsSite.Models.Card
+@{
+    ViewData["Title"] = "Character Card";
+}
+
+<h1 class="h1_add">Карточка персонажа</h1>
+
+<div class="form-div_info form-group div_character">
+    <input class="input_character_name" asp-for="Name" class="form-control" readonly/>
+</div>
+
+<form asp-action="edit" asp-controller="home" method="put" enctype="multipart/form-data">
+    <div class="form-div_character">
+        <div class="form-div_info form-group div_character">
+            <label class="label_character" asp-for="BirthDate" class="control-label">Дата рождения</label>
+            <input class="input_character" asp-for="BirthDate" class="form-control" readonly />
+        </div>
+        <div class="form-div_info form-group div_character">
+            <label class="label_character" asp-for="BirthPlanet" class="control-label">Планета</label>
+            <input class="input_character" asp-for="BirthPlanet" class="form-control" readonly />
+        </div>
+        <div class="form-div_info form-group div_character">
+            <label class="label_character" asp-for="Gender" class="control-label">Пол</label>
+            <input class="input_character" asp-for="Gender" class="form-control" readonly />
+        </div>
+        <div class="form-div_info form-group div_character">
+            <label class ="label_character" asp-for="Race" class="control-label">Раса</label>
+            <input class="input_character" asp-for="Race" class="form-control" readonly />
+        </div>
+        <div class="form-div_info form-group div_character">
+            <label class="label_character" asp-for="Height" class="control-label">Рост</label>
+            <input class="input_character" asp-for="Height" class="form-control" readonly />
+        </div>
+        <div class="form-div_info form-group div_character">
+            <label class="label_character" asp-for="HairColor" class="control-label">Цвет волос</label>
+            <input class="input_character" asp-for="HairColor" class="form-control" readonly />
+        </div>
+        <div class="form-div_info form-group div_character">
+            <label class="label_character" asp-for="EyesColor" class="control-label">Цвет глаз</label>
+            <input class="input_character" asp-for="EyesColor" class="form-control" readonly />
+        </div>
+    </div>
+    <div class="form-div_character">
+        <div class="form-div_info form-group div_character_select">
+            <label class="label_character" asp-for="Movies" class="control-label">Фильмы</label>
+            <select class="select_character" multiple="multiple" class="form-select" asp-for="Movies" class="form-control" size="11">
+                <option disabled>«Звёздные войны: Новая надежда» (1977)</option>
+                <option disabled>«Звёздные войны: Империя наносит ответный удар» (1980)</option>
+                <option disabled>«Звёздные войны: Возвращение джедая» (1983)</option>
+                <option disabled>«Звёздные войны: Скрытая угроза» (1999)</option>
+                <option disabled>«Звёздные войны: Атака клонов» (2002)</option>
+                <option disabled>«Звёздные войны: Месть ситхов» (2005)</option>
+                <option disabled>«Звёздные войны: Пробуждение силы» (2015)</option>
+                <option disabled>«Изгой-один: Звёздные войны. Истории» (2016)</option>
+                <option disabled>«Звёздные войны: Последние джедаи» (2017)</option>
+                <option disabled>«Хан Соло. Звёздные войны. Истории» (2018)</option>
+                <option disabled>«Звёздные войны: Скайуокер. Восход» (2019)</option>
+            </select>
+        </div>
+    </div>
+</form>
+
+<div class="form-div_info form-div_description form-group div_character_desc">
+    <input class="label_description" asp-for="Description" class="form-control" readonly/>
+</div>

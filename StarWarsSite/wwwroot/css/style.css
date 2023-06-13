@@ -1,0 +1,396 @@
+﻿
+*{
+    margin: 0;
+}
+
+body {
+    background-image: url(../images/background-space.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    min-height: 10vh;
+    background-color: black;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+main {
+    min-height: 80vh;
+}
+
+footer {
+    min-height: 10vh;
+    background-color: black;
+}
+
+nav {
+    height: 10vh;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+ul{
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+    margin-left: auto;
+}
+
+a {
+    text-decoration: none;
+    font-size: x-large;
+    color: white;
+    outline: 1px solid transparent;
+    outline-offset: 0;
+    transition: color .3s ease-in-out, outline .3s ease-in-out, outline-offset .3s ease-in-out, stroke .3s;
+}
+
+a:hover{
+    color: cyan;
+    outline: 1px solid cyan;
+    outline-offset: 2px;
+}
+
+a:hover {
+    color: cyan;
+    outline: 1px solid cyan;
+    transition: color .3s ease-in-out, outline .3s ease-in-out;
+}
+
+a:active{
+    color: darkblue;
+    outline-color: darkblue;
+    transition: color .3s ease-in-out, outline-color .3s ease-in-out;
+}
+
+a svg path,
+a svg polygon{
+    transition: stroke .3s ease-in-out;
+}
+
+a:hover svg path,
+a:hover svg polygon{
+    stroke: cyan;
+}
+
+a:focus svg path,
+a:focus svg polygon{
+    stroke: cyan;
+    transition: stroke .3s ease-in-out;
+}
+
+a:active svg path,
+a:active svg polygon{
+    stroke: darkblue;
+    transition: stroke .3s ease-in-out;
+}
+
+.container{
+    padding: 0;
+    margin: auto;
+    width: 90%;
+    color: white;
+}
+
+.div_allcards {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+    font: 0;
+}
+
+.div_cards {
+    width: 40%;
+    height: 60px;
+    position: relative;
+    padding: 10px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(9,9,121,1) 100%);
+    transition: box-shadow .3s ease-in-out;
+}
+
+.div_cards:nth-child(2n+1){
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+
+.div_cards:hover {
+    box-shadow: 14px 14px 35px 0px rgba(0, 0, 0, 1);
+}
+
+.div_cards p{
+    color: black;
+}
+
+.p_Name{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.p_OriginalName{
+    font-size: 20px;
+}
+
+.div-a_edit{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+
+.div-a_edit svg{
+    z-index: -1;
+}
+
+.div-a_info {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 55px;
+    top: 25px;
+}
+
+.div-a_info svg{
+    z-index:-1;
+}
+
+.div-a_delete {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 90px;
+    top: 25px;
+}
+
+.div_sort {
+    display: flex;
+    position: relative;
+    gap: 50px;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.div-item_sort {
+    display: block;
+    margin: 0;
+    height: 90px;
+    align-content: center;
+}
+
+.div_sortleft,
+.div_sortright {
+    align-items: center;
+    width: 40%;
+}
+
+.div_character_select{
+    display: flex;
+    align-items: center;
+}
+
+.div_character_desc{
+    width: 100%;
+}
+
+.h1_add {
+    margin: 0;
+    font-size: 30px;
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    position: relative;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-div_info{
+    display: flex;
+    gap: 20px;
+}
+
+.form-div_character{
+    display: flex;
+    width: 50%;
+    height: 50%;
+    flex-wrap:wrap;
+}
+
+label {
+    width: 200px;
+    font-size: 20px;
+}
+
+.label_sort{
+    margin-right: 10px;
+}
+
+.label_character{
+    width: 100px;
+    font-size: 18px;
+}
+
+.label_description {
+    width: 100%;
+    height: 200px;
+    border: none;
+    background: none;
+    color: white;
+    outline: none;
+}
+
+input {
+    width: 300px;
+    font-size: 15px;
+}
+
+.input_date {
+    width: 50px;
+    transition: background-color .3s ease-in-out;
+}
+
+.input_sort {
+    width: 220px;
+    transition: background-color .3s ease-in-out;
+}
+
+.input_character {
+    width: 100px;
+    background: none;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.input_character_name {
+    font-size: 30px;
+    margin-top: 20px;
+    background: none;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.input_date:hover {
+    background-color: lightcyan;
+}
+
+.input_date:focus{
+    background-color: lightcyan;
+    transition: background-color .3s ease-in-out;
+}
+
+.input_date:active{
+    background-color: lightblue;
+    transition: background-color .3s ease-in-out;
+}
+
+.input_sort:hover {
+    background-color: lightcyan;
+}
+
+.input_sort:focus {
+    background-color: lightcyan;
+    transition: background-color .3s ease-in-out;
+}
+
+.input_sort:active {
+    background-color: lightblue;
+    transition: background-color .3s ease-in-out;
+}
+
+.input_usable:hover {
+    background-color: lightcyan;
+}
+
+.input_usable:focus {
+    background-color: lightcyan;
+    transition: background-color .3s ease-in-out;
+}
+
+.input_usable:active {
+    background-color: lightblue;
+    transition: background-color .3s ease-in-out;
+}
+
+.form-div_description{
+    height: 150px;
+}
+
+.input_description{
+    width: 100%;
+}
+
+.form-select{
+     width: 100%;
+}
+
+.form-div_buttons{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    gap: 5%;
+    margin-left: auto;
+}
+
+.form-button{
+    height: 50px;
+    font-size: 20px;
+    background-color: aliceblue;
+    border-color:transparent;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+}
+
+.button_sort{
+    position: absolute;
+    right: 0;
+    bottom:0;
+}
+
+button:hover{
+    background-color: cyan;
+    border-color: darkblue;
+}
+button:focus {
+    background-color: cyan;
+    border-color: darkblue;
+    transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+}
+
+button:active {
+    background-color: darkblue;
+    transition: background-color .3s ease-in-out;
+}
+
+.select_character {
+    background: none;
+    color: white;
+    border: none;
+    overflow-y: auto;
+}
+
+option[disabled] {
+    color: white;
+}
+
+footer{
+    padding-top: 20px;
+}

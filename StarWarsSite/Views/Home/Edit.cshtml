@@ -1,0 +1,73 @@
+﻿@model StarWarsSite.Models.Card
+@{
+    ViewData["Title"] = "Add Character";
+}
+
+<h1 class="h1_add">Редактирование персонажа</h1>
+
+<form asp-action="edit" asp-controller="home" method="put" enctype="multipart/form-data">
+    <div class="form-div">
+        <div class="form-div_info form-group">
+            <label asp-for="Name" class="control-label" Name="Name">Имя персонажа</label>
+            <input class="input_usable" type="text" asp-for="Name" class="form-control" />
+        </div>
+        <div class="form-div_info form-group">
+            <label asp-for="OriginalName" class="control-label">Имя (в оригинале)</label>
+            <input class="input_usable" type="text" asp-for="OriginalName" class="form-control" />
+        </div>
+        <div class="form-div_info form-group">
+            <label asp-for="BirthDate" class="control-label">Дата рождения</label>
+            <input class="input_usable" type="text" asp-for="BirthDate" class="form-control" />
+        </div>
+        <div class="form-div_info form-group">
+            <label asp-for="BirthPlanet" class="control-label">Планета</label>
+            <input class="input_usable" type="text" asp-for="BirthPlanet" class="form-control" />
+        </div>
+        <div class="form-div_info form-group">
+            <label asp-for="Gender" class="control-label">Пол</label>
+            <input class ="input_usable" type="text" asp-for="Gender" class="form-control" />
+        </div>
+        <div class="form-div_info form-group">
+            <label asp-for="Race" class="control-label">Раса</label>
+            <input class="input_usable" type="text" asp-for="Race" class="form-control" />
+        </div>
+        <div class="form-div_info form-group">
+            <label asp-for="Height" class="control-label">Рост</label>
+            <input class ="input_usable" type="number" asp-for="Height" class="form-control" />
+        </div>
+        <div class="form-div_info form-group">
+            <label asp-for="HairColor" class="control-label">Цвет волос</label>
+            <input class="input_usable" type="text" asp-for="HairColor" class="form-control" />
+        </div>
+        <div class="form-div_info form-group">
+            <label asp-for="EyesColor" class="control-label">Цвет глаз</label>
+            <input class ="input_usable" type="text" asp-for="EyesColor" class="form-control" />
+        </div>
+    </div>
+    <div class="form-div">
+        <div class="form-div_info form-div_description form-group">
+            <label asp-for="Description" class="control-label">Описание</label>
+            <input class="input_usable" type="text" class="input_description" asp-for="Description" class="form-control" />
+        </div>
+        <div class="form-div_info form-group">
+            <label asp-for="Movies" class="control-label">Фильмы</label>
+            <select multiple="multiple" class="form-select" asp-for="Movies" class="form-control">
+                <option>«Звёздные войны: Новая надежда» (1977)</option>
+                <option>«Звёздные войны: Империя наносит ответный удар» (1980)</option>
+                <option>«Звёздные войны: Возвращение джедая» (1983)</option>
+                <option>«Звёздные войны: Скрытая угроза» (1999)</option>
+                <option>«Звёздные войны: Атака клонов» (2002)</option>
+                <option>«Звёздные войны: Месть ситхов» (2005)</option>
+                <option>«Звёздные войны: Пробуждение силы» (2015)</option>
+                <option>«Изгой-один: Звёздные войны. Истории» (2016)</option>
+                <option>«Звёздные войны: Последние джедаи» (2017)</option>
+                <option>«Хан Соло. Звёздные войны. Истории» (2018)</option>
+                <option>«Звёздные войны: Скайуокер. Восход» (2019)</option>
+            </select>
+        </div>
+        <div class="form-div_buttons">
+            <button class="form-button" asp-action="Index">Отменить</button>
+            <button class="form-button" asp-action="Create">Сохранить</button>
+        </div>
+    </div>
+</form>
